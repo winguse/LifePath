@@ -7,6 +7,7 @@
 
 import SwiftUI
 import MapKit
+import OSLog
 
 struct MapView: UIViewRepresentable {
 
@@ -21,10 +22,10 @@ struct MapView: UIViewRepresentable {
             }
 
             let line = MKPolyline.init(coordinates: locations.map {
-                ConvertKits.transformFromWGSToGCJ(wgsLoc: CLLocationCoordinate2D.init(latitude: $0.latitude, longitude: $0.longitude))
+                Utils.transformFromWGSToGCJ(wgsLoc: CLLocationCoordinate2D.init(latitude: $0.latitude, longitude: $0.longitude))
             }, count: locations.count)
 
-            print("draw \(locations.count) points")
+            Logger.ui.info("draw \(locations.count) points")
 
             uiView.addOverlay(line)
             if (firstTime) {

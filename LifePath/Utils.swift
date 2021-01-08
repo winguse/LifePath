@@ -5,10 +5,11 @@
 //  Created by Yingyu Cheng on 1/7/21.
 //
 
-import Foundation
+import SwiftUI
 import CoreLocation
+import OSLog
 
-class ConvertKits {
+class Utils {
     private static let a = 6378245.0;
     private static let ee = 0.00669342162296594323;
 
@@ -49,5 +50,25 @@ class ConvertKits {
         lon += (150.0 * sin(x / 12.0 * Double.pi)) * 2.0 / 3.0;
         lon += (300.0 * sin(x / 30.0 * Double.pi)) * 2.0 / 3.0;
         return lon;
+    }
+
+    static func sendNotification(title: String, body: String) {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { (settings) in
+            if settings.authorizationStatus == .authorized {
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.body = body
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false)
+                let uuidString = UUID().uuidString
+                let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+
+                notificationCenter.add(request) { (error) in
+                    if let error = error {
+                        Logger.background.error("add notification error \(error as NSObject)")
+                    }
+                }
+            }
+        }
     }
 }
