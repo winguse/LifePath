@@ -15,6 +15,11 @@
 		4426EC28257FC413007392B0 /* LifePath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4426EC26257FC413007392B0 /* LifePath.xcdatamodeld */; };
 		4426EC33257FC413007392B0 /* LifePathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426EC32257FC413007392B0 /* LifePathTests.swift */; };
 		4426EC3E257FC413007392B0 /* LifePathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426EC3D257FC413007392B0 /* LifePathUITests.swift */; };
+		4426EC54257FCCEB007392B0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4426EC53257FCCEB007392B0 /* MapView.swift */; };
+		4438C3C125A5EC47008D49DC /* LifePathStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438C3C025A5EC47008D49DC /* LifePathStore.swift */; };
+		44E49EB825A75D8800B1E5DE /* ConvertKits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E49EB725A75D8800B1E5DE /* ConvertKits.swift */; };
+		44F45C25259F5D92005153A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F45C24259F5D92005153A7 /* MapKit.framework */; };
+		44F45C2A25A055AD005153A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44F45C2925A055AD005153A7 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		4426EC39257FC413007392B0 /* LifePathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifePathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4426EC3D257FC413007392B0 /* LifePathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePathUITests.swift; sourceTree = "<group>"; };
 		4426EC3F257FC413007392B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4426EC53257FCCEB007392B0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4438C3C025A5EC47008D49DC /* LifePathStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePathStore.swift; sourceTree = "<group>"; };
+		44E49EB725A75D8800B1E5DE /* ConvertKits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertKits.swift; sourceTree = "<group>"; };
+		44F45C24259F5D92005153A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44F45C2925A055AD005153A7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F45C25259F5D92005153A7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +94,7 @@
 				4426EC31257FC413007392B0 /* LifePathTests */,
 				4426EC3C257FC413007392B0 /* LifePathUITests */,
 				4426EC19257FC412007392B0 /* Products */,
+				44F45C23259F5D92005153A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +118,10 @@
 				4426EC29257FC413007392B0 /* Info.plist */,
 				4426EC26257FC413007392B0 /* LifePath.xcdatamodeld */,
 				4426EC21257FC413007392B0 /* Preview Content */,
+				4426EC53257FCCEB007392B0 /* MapView.swift */,
+				44F45C2925A055AD005153A7 /* Settings.bundle */,
+				4438C3C025A5EC47008D49DC /* LifePathStore.swift */,
+				44E49EB725A75D8800B1E5DE /* ConvertKits.swift */,
 			);
 			path = LifePath;
 			sourceTree = "<group>";
@@ -136,6 +152,14 @@
 			path = LifePathUITests;
 			sourceTree = "<group>";
 		};
+		44F45C23259F5D92005153A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44F45C24259F5D92005153A7 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +176,8 @@
 			dependencies = (
 			);
 			name = LifePath;
+			packageProductDependencies = (
+			);
 			productName = LifePath;
 			productReference = 4426EC18257FC412007392B0 /* LifePath.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +249,8 @@
 				Base,
 			);
 			mainGroup = 4426EC0F257FC412007392B0;
+			packageReferences = (
+			);
 			productRefGroup = 4426EC19257FC412007392B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4426EC23257FC413007392B0 /* Preview Assets.xcassets in Resources */,
+				44F45C2A25A055AD005153A7 /* Settings.bundle in Resources */,
 				4426EC20257FC413007392B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E49EB825A75D8800B1E5DE /* ConvertKits.swift in Sources */,
 				4426EC25257FC413007392B0 /* Persistence.swift in Sources */,
+				4426EC54257FCCEB007392B0 /* MapView.swift in Sources */,
+				4438C3C125A5EC47008D49DC /* LifePathStore.swift in Sources */,
 				4426EC1E257FC412007392B0 /* ContentView.swift in Sources */,
 				4426EC28257FC413007392B0 /* LifePath.xcdatamodeld in Sources */,
 				4426EC1C257FC412007392B0 /* LifePathApp.swift in Sources */,
