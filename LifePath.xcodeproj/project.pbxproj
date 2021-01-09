@@ -19,6 +19,7 @@
 		4438C3C125A5EC47008D49DC /* LifePathStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4438C3C025A5EC47008D49DC /* LifePathStore.swift */; };
 		44E49EB825A75D8800B1E5DE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E49EB725A75D8800B1E5DE /* Utils.swift */; };
 		44E49ED925A8911800B1E5DE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E49ED825A8911800B1E5DE /* Logger.swift */; };
+		44E49EE725A94C2900B1E5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E49EE625A94C2900B1E5DE /* AppDelegate.swift */; };
 		44F45C25259F5D92005153A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F45C24259F5D92005153A7 /* MapKit.framework */; };
 		44F45C2A25A055AD005153A7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 44F45C2925A055AD005153A7 /* Settings.bundle */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		4438C3C025A5EC47008D49DC /* LifePathStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifePathStore.swift; sourceTree = "<group>"; };
 		44E49EB725A75D8800B1E5DE /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		44E49ED825A8911800B1E5DE /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		44E49EE625A94C2900B1E5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44F45C24259F5D92005153A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		44F45C2925A055AD005153A7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 				44F45C2925A055AD005153A7 /* Settings.bundle */,
 				4438C3C025A5EC47008D49DC /* LifePathStore.swift */,
 				44E49EB725A75D8800B1E5DE /* Utils.swift */,
+				44E49EE625A94C2900B1E5DE /* AppDelegate.swift */,
 			);
 			path = LifePath;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				44E49EB825A75D8800B1E5DE /* Utils.swift in Sources */,
 				4426EC25257FC413007392B0 /* Persistence.swift in Sources */,
 				4426EC54257FCCEB007392B0 /* MapView.swift in Sources */,
+				44E49EE725A94C2900B1E5DE /* AppDelegate.swift in Sources */,
 				4438C3C125A5EC47008D49DC /* LifePathStore.swift in Sources */,
 				4426EC1E257FC412007392B0 /* ContentView.swift in Sources */,
 				4426EC28257FC413007392B0 /* LifePath.xcdatamodeld in Sources */,
