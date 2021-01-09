@@ -13,14 +13,11 @@ struct MapView: UIViewRepresentable {
 
     @Binding var locations: [Location]
 
-
     func updateUIView(_ uiView: MKMapView, context: Context) {
+        for overlay in uiView.overlays {
+            uiView.removeOverlay(overlay)
+        }
         if (locations.count > 1) {
-            let firstTime = uiView.overlays.isEmpty
-            for overlay in uiView.overlays {
-                uiView.removeOverlay(overlay)
-            }
-
             let line = MKPolyline.init(coordinates: locations.map {
                 Utils.transformFromWGSToGCJ(wgsLoc: CLLocationCoordinate2D.init(latitude: $0.latitude, longitude: $0.longitude))
             }, count: locations.count)
@@ -28,9 +25,7 @@ struct MapView: UIViewRepresentable {
             Logger.ui.info("draw \(locations.count) points")
 
             uiView.addOverlay(line)
-            if (firstTime) {
-                uiView.setVisibleMapRect(line.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20), animated: true)
-            }
+            uiView.setVisibleMapRect(line.boundingMapRect, edgePadding: UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20), animated: true)
         } else {
             let region = MKCoordinateRegion(center: uiView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
             uiView.setRegion(region, animated: true)

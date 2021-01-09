@@ -13,15 +13,16 @@ class LifePathStore: ObservableObject {
 
     init(pc: PersistenceController = PersistenceController.shared) {
         self.pc = pc
-        fetch24HLocations()
+        minTimestatmp = pc.queryMinTimestamp()
     }
 
+    @Published var minTimestatmp: Date = Date.init(timeIntervalSince1970: 0)
     @Published var locations = [Location]()
 
-    func fetch24HLocations() {
-        locations = pc.queryLocations(
-            start: Date.init(timeIntervalSinceNow: 24 * -3600),
-            end: Date.init(timeIntervalSinceNow: 0)
-        )
+    func fetchLocations(start: Date, end: Date) {
+        let newLocations = pc.queryLocations(start: start, end: end)
+        if locations.last != newLocations.last || locations.first != newLocations.first {
+            locations = newLocations
+        }
     }
 }
