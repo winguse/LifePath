@@ -80,6 +80,23 @@ struct ContentView: View {
                     .pickerStyle(SegmentedPickerStyle())
                 DatePicker("Time", selection: $selectedStartTime, in: store.minTimestatmp...Date(), displayedComponents: .date)
                     .datePickerStyle(GraphicalDatePickerStyle())
+                HStack {
+                    Spacer()
+                    Button(action: { ImportExport.exportData() }, label: {
+                            Text("Export").frame(width: basicSize, height: basicSize * 0.4)
+                        })
+                        .foregroundColor(Color.primary)
+                        .background(Color.secondary)
+                        .cornerRadius(basicSize * 0.1)
+                    Spacer()
+                    Button(action: { ImportExport.importData() }, label: {
+                            Text("Import").frame(width: basicSize, height: basicSize * 0.4)
+                        })
+                        .foregroundColor(Color.primary)
+                        .background(Color.secondary)
+                        .cornerRadius(basicSize * 0.1)
+                    Spacer()
+                }
                 Spacer().frame(maxWidth: .infinity)
                 Button(action: togglePopover, label: {
                     Text("OK")
